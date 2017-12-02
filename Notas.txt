@@ -1,0 +1,1 @@
+Eliminar los espacios en blanco al final de las cadenas en los formularios de registro

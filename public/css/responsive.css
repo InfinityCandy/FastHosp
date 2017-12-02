@@ -1,0 +1,36 @@
+@media all and (min-width:990px) and (max-width: 1070px) {
+    .userDateInfoWraper {
+        margin: 0 20px 40px 50px; 
+    }
+    
+}
+
+@media all and (max-width:987px) {
+    .form-style-5 input[type="submit"] {
+        width: 80%;
+    }
+}
+
+@media all and (max-width:768px) {
+    .userIconContainer {
+        text-align: right;
+    }
+    
+    /********************* Listar citas *********************/
+    .userDateInfoWraper {
+        margin-right: 20px;
+        margin-bottom: 45px;
+        margin-left: 10%;
+    }
+    
+    .userDateImage {
+        width: 120px;
+        height: 115px;
+    }
+}
+
+@media all and (max-width:487px) {
+    .form-style-5 input[type="submit"] {
+        width: 100%;
+    }
+}

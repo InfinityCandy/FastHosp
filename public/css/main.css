@@ -1,0 +1,381 @@
+/*********************** CROSS PAGES ********************/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg-test.png);
+}
+
+.row {
+    margin: 0;
+}
+
+.headerStyle {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    /*background: #fe0505 url(../img/bg-header.png);*/
+    background: #285980 url(../img/bg-header.png);
+    color: white;
+    box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.3);
+}
+
+.userIconContainer {
+    top: 9px;
+    text-align: right; 
+}
+
+.userIcon {
+    cursor: pointer;
+    width: 60px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Menu lateral de opciones */
+#check {
+    display: none;
+}
+
+.menuContainer {
+    top: 20px;
+    text-align: center;
+}
+
+.menu {
+    top: 70px;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    /*background: #fe0505 url(../img/bg-header.png);*/
+    background: #1d496b url(../img/bg-header.png);
+    transition: all 300ms;
+    overflow: hidden;
+    box-shadow: 1px 0px 0px 0px rgba(0,0,0,0.3);
+    z-index: 999;
+    font-weight: 700;   
+}
+
+.menuIcono {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu li {
+    list-style: none;
+    padding: 14px 14px 14px 35px;
+    cursor: pointer;
+    transition: all 300ms;
+    display: block;
+    width: 300px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#list {
+    margin: 0;
+    padding: 0;
+}
+/* -/Menu lateral de opciones FIN */
+
+
+.visor {
+    background-color: rgba(0,0,0,0.3);
+    height: 100vh;
+    visibility: hidden;
+    transition: all 100ms;
+    z-index: 1000;
+}
+
+.mainBox {
+    margin-top: 70px;
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    
+}
+
+.containerBoxBg {
+    background-color: white;
+}
+
+.boxTitle {
+    background: #f4f7f8;
+    font-size: 1.2em;
+    border-bottom: 2px solid #baf0cc;
+    margin-bottom: 15px;
+}
+
+/* Vista previa de imagen de usuario */
+.imagePreviewContainer {
+    height: 300px;
+}
+
+.imagePreview {
+    max-height: 100%;
+    max-width: 80%;
+}
+/* -/Vista previa de imagen de usuario FIN */
+
+
+/* Menú de usuario */
+#checkUserMenu {
+    display: none;
+}
+
+.userMenuContainer {
+    background: #fcfcfc url(../img/bg.png);
+    color: black;
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    text-align: center;
+    z-index: 999;
+    width: 300px;
+    box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.3);
+    transition: all 300ms;
+    display: none;
+}
+
+.userMenu {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.userMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+.userMenu li {
+    margin-bottom: 5px;
+    list-style: none;
+    padding: 14px 14px 14px 14px;
+    cursor: pointer;
+    transition: all 300ms;
+    display: block;
+}
+
+
+.userMenu li:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#nombreUsuario {
+    background: rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    cursor: default;
+}
+/* -/Menu de usuario FIN */
+
+
+.error {
+    text-align: center;
+    color: #e21a16;
+    font-weight: 700;
+}
+
+.alert {
+    text-align: center;
+    color: darkorange;
+    font-weight: 700;
+}
+
+.succes {
+    text-align: center;
+    color: limegreen;
+    font-weight: 700;
+}
+
+
+/* Cambiar Contraseña Formulario */
+.changePasswordButton {
+    margin-top: 15px;
+}
+/* -/Cambiar Contraseña Formulario FIN */
+
+
+/* Contenedor del estado de las transacciones */
+.statusMessageContainer {
+    padding-top: 25vh;
+    margin-bottom: 50vh;
+}
+/* -/Contenedor del estado de las transacciones FIN */
+
+/* Submit button simple styles */
+.sumbmitButtonCotainer {
+    margin-top: 30px;
+}
+/* -/Submit button simple styles */
+
+/********************** Index styles ******************/
+
+.coverImage {
+    /*background-image: url("https://unsplash.it/1500/1000/?random");*/
+    background-image: url("../img/bg-index-cover.jpg");
+    position: relative;
+    opacity: 0.85;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.coverImageText {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.informationSection {
+    /*border-top: 1.2px solid #1b8a7d;*/
+    border-top: 1.2px solid #0027fb;
+}
+
+.informationSectionTitle {
+    text-align: center;
+}
+
+.informationSectionBoxes {
+    background-color: rgba(244, 244, 244, 1);
+    text-align: center;
+    border-right: 3px solid white;
+    border-left: 2px solid white;
+}
+
+.footerStyle {
+    height: 35px;
+    background: #424141 url(../img/bg-index-footer.png);
+    box-shadow: 3px 0px 0px 3px rgba(0,0,0,.1);
+    text-align: center;
+    color: white;
+}
+
+.errorContainer {
+    position: relative;
+    top: 55%;
+}
+
+
+/**********************Testing area*******************/
+
+
+/********************** Registrar paciente *******************/
+.expedienteDelTrabajadorContainer {
+    display: none;
+    transition: all 1000ms;
+}
+
+
+/********************** Registrar médico *******************/
+.turnoDeMedicoContainer {
+    display: none;
+    transition: all 1000ms;   
+}
+
+/********************* Listar citas (Urgencias/Medicina Familiar) *********************/
+.userDateInfoWraper {
+    background-color: #e2f3e2;
+    margin: 0 20px 45px 65px;
+    cursor: pointer;
+    transition: all 300ms;
+    box-shadow: -10px 10px 10px -5px rgba(0,0,0,0.3);
+    color: #333;
+    
+}
+
+.userDateInfoContainer {
+    margin-top: 20px;
+}
+
+.userDateImage {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.userDateInfoWraper:hover {
+    background-color: #dae7da;
+}
+
+/********************* Consulta *********************/
+.consultaUserImageContainer {
+    height: 270px;
+}
+
+.consultaUserImage {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 9%;
+    border-radius: 10%;
+}
+.userBasicInfo {
+    margin-bottom: 12%;
+}
+
+.historiaClinica {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/********************* Peticiones de farmacia *********************/
+.medicineRequestContainer {
+    margin-bottom: 2%;
+}
+
+.medicineRequest {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #22b3e3;
+    font-size: 1.5em;
+    text-align: center;
+    font-style: normal;
+    width: 25%;
+    border: 1px solid #22b3e3;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: all 300ms
+}
+
+.medicineRequest:hover {
+    background: #20a1cc;
+}
+
+
+.userRequestImage {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+/********************* Ver petición de farmacia *********************/
+.userMedicineRequestInfoWraper {
+    background-color: #f5f9e9;
+    margin-bottom: 20px;
+    box-shadow: -10px 10px 10px -5px rgba(0,0,0,0.3);  
+}
+
+.userMedicineRequestImage {
+    width: 150px;
+    height: 140px;
+    border-radius: 25%;
+}
+
