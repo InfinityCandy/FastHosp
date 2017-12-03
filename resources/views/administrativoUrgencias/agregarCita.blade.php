@@ -25,33 +25,33 @@
         
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Expediente del paciente</label>
-                <input class="form-control" type="text" name="expedientePaciente" id="expedientePaciente" placeholder="X-XXXXXX-P">
+                <input class="form-control" type="text" name="expedientePaciente" id="expedientePaciente" placeholder="X-XXXXXX-P" required>
                 <p id="expedienteError" class="error"></p>
             </div>
             
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Expediente del médico urgenciologo</label>
-                <input class="form-control" type="text" name="expedienteUrgenciologo" id="expedienteUrgenciologo" placeholder="X-XXXXXX-P">
+                <input class="form-control" type="text" name="expedienteUrgenciologo" id="expedienteUrgenciologo" placeholder="X-XXXXXX-P" required>
             </div>
             
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Nombre del médico</label>
-                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Marco Antonio Barrera Morales">
+                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Marco Antonio Barrera Morales" required>
             </div>
         
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Consultorio</label>
-                <input class="form-control" type="text" name="consultorio" id="consultorio" placeholder="X-XXXXXX-P">
+                <input class="form-control" type="text" name="consultorio" id="consultorio" placeholder="X-XXXXXX-P" required>
             </div>
         
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Turno</label>
-                <input class="form-control" type="text" name="turno" id="turno">
+                <input class="form-control" type="text" name="turno" id="turno" required>
             </div>
             
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Fecha de hoy</label>
-                <input class="form-control" type="date" name="fechaDeHoy" id="fechaDeHoy">
+                <input class="form-control" type="date" name="fechaDeHoy" id="fechaDeHoy" required>
             </div>
             
             <div class="col-sm-12 sumbmitButtonCotainer">

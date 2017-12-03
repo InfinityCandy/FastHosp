@@ -27,47 +27,47 @@
         
             <div class="col-md-3 form-group">
                 <label for="nombre">Nombre</label>
-                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="José Angel">
+                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="José Angel" required>
             </div>
         
             <div class="col-md-5 form-group">
                 <label for="apellidos">Apellidos</label>
-                <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Appellido Paterno Appellido Materno. Ejemplo: Rosales Rocha">
+                <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Appellido Paterno Appellido Materno. Ejemplo: Rosales Rocha" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="fechaDeNacimiento">Fecha de nacimiento</label>
-                <input class="form-control" type="date" name="fechaDeNacimiento" id="fechaDeNacimiento">
+                <input class="form-control" type="date" name="fechaDeNacimiento" id="fechaDeNacimiento" required>
             </div>
         
             <div class="col-md-2 form-group">
                 <label for="edad">Edad</label>
-                <input class="form-control" type="text" name="edad" id="edad">
+                <input class="form-control" type="text" name="edad" id="edad" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="email">Correo electrónico</label>
-                <input class="form-control" type="text" name="email" id="email" placeholder="Ejmplo: correo@ejemplo.com">
+                <input class="form-control" type="text" name="email" id="email" placeholder="Ejmplo: correo@ejemplo.com" required>
             </div>
         
             <div class="col-md-5 form-group">
                 <label for="direccion">Dirección de residencia</label>
-                <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Pais, Estado, ciudad, calle">
+                <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Pais, Estado, ciudad, calle" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="telefono">Teléfono celular o fijo</label>
-                <input class="form-control" type="text" name="telefono" id="telefono">
+                <input class="form-control" type="text" name="telefono" id="telefono" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="lugarDeNacimientoPais">Lugar de nacimiento: Pais</label>
-                <input class="form-control" type="text" name="lugarDeNacimientoPais" id="lugarDeNacimientoPais">
+                <input class="form-control" type="text" name="lugarDeNacimientoPais" id="lugarDeNacimientoPais" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="lugarDeNacimientoEstado">Lugar de nacimiento: Estado</label>
-                <input class="form-control" type="text" name="lugarDeNacimientoEstado" id="lugarDeNacimientoEstado">
+                <input class="form-control" type="text" name="lugarDeNacimientoEstado" id="lugarDeNacimientoEstado" required>
             </div>
         
             <div class="col-md-2 form-group">
@@ -83,23 +83,23 @@
         
             <div class="col-md-4 form-group">
                 <label for="institucionDeProcedencia">institucion de procedencia</label>
-                <input class="form-control" type="text" name="institucionDeProcedencia" id="institucionDeProcedencia">
+                <input class="form-control" type="text" name="institucionDeProcedencia" id="institucionDeProcedencia" required>
             </div>
         
             <div class="col-md-4 form-group">
                 <label for="cedulaProfesional">Cedula profesional</label>
-                <input class="form-control" type="text" name="cedulaProfesional" id="cedulaProfesional">
+                <input class="form-control" type="text" name="cedulaProfesional" id="cedulaProfesional" required>
             </div>
             
                         
             <div class="col-md-3 form-group">
                 <label for="fechaInicoDeLabores">Fecha de inicio de labores</label>
-                <input class="form-control" type="date" name="fechaInicoDeLabores" id="fechaDeNacimiento">
+                <input class="form-control" type="date" name="fechaInicoDeLabores" id="fechaDeNacimiento" required>
             </div>
         
             <div class="col-md-3 form-group">
                 <label for="fechaFinDeLabores">Fecha fin de labores</label>
-                <input class="form-control" type="date" name="fechaFinDeLabores" id="fechaFinDeLabores">
+                <input class="form-control" type="date" name="fechaFinDeLabores" id="fechaFinDeLabores" required>
             </div>
         
             <div class="col-md-3 form-group">
@@ -121,7 +121,7 @@
             
             <div class="col-md-3 form-group">
                 <label for="foto">Foto: </label>
-                <input  type="file" name="foto" id="foto" accept="image/*">
+                <input  type="file" name="foto" id="foto" accept="image/*" required>
             </div>
         
             <div class="col-sm-12">
