@@ -21,6 +21,8 @@
    <form method="post" action="../despacharPeticionDeFarmacia" onsubmit="return validar()">
       <input type="hidden" name="_token" value="{!! csrf_token() !!}"> 
       <input type="hidden" name="pacienteExpediente" id="pacienteExpediente" value="{{$pacienteInfo[0]->pacienteExpediente}}">
+      <input type="hidden" name="idDePeticion" id="idDePeticion" value="{{$pacienteInfo[0]->id}}">
+      
       <fieldset class="form-style-5">
        <div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 userMedicineRequestInfoWraper">
            <div class="userDateInfoContainer">

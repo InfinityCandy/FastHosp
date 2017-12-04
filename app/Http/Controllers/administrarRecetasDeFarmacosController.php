@@ -33,7 +33,7 @@ class administrarRecetasDeFarmacosController extends Controller
             $queryResult = DB::table('medicamentos')
                                 ->join('pacientes', 'pacientes.pacienteExpediente', '=', 'medicamentos.expedienteDelPaciente')
                                 ->where('pacientes.pacienteExpediente', "=", $expedientePaciente)
-                                ->select('pacientes.pacienteExpediente', 'pacientes.nombre', 'pacientes.apellido', 'pacientes.foto', 'medicamentos.medicamentos')
+                                ->select('pacientes.pacienteExpediente', 'pacientes.nombre', 'pacientes.apellido', 'pacientes.foto', 'medicamentos.medicamentos', 'medicamentos.id')
                                 ->get(); 
             
             return view('farmaceutico.iniciarDespachoDeFarmacos', ['nombreUsuario' => $userName, 'userImage' => $userImage, 'pacienteInfo' => $queryResult]);
@@ -45,7 +45,7 @@ class administrarRecetasDeFarmacosController extends Controller
     
     public function despacharPeticionDeFarmaco (Request $request) {
         DB::table('medicamentos')
-            ->where('expedienteDelPaciente', '=', $request->pacienteExpediente)->delete();
+            ->where('id', '=', $request->idDePeticion)->delete();
         
         return redirect('listarPeticionesEnFarmacia');
         

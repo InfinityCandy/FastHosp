@@ -158,7 +158,7 @@
             </div>
            
            <div class="col-sm-12 sumbmitButtonCotainer">
-                <input type="submit" value="Eviar"> 
+                <input type="submit" value="Terminar Consulta"> 
                 <p id="serverError" class="error"></p>
             </div>
        </fieldset>

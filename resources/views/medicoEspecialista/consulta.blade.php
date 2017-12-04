@@ -18,10 +18,11 @@
 
 @section('principal')
    @section('boxTitle', 'Consulta')
-     <form method="post" action="../" enctype="multipart/form-data">
+     <form method="post" action="../finalizarConsultaEspecialidad" enctype="multipart/form-data">
       
        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
        <input type="hidden" name="expedientePaciente" id="expedientePaciente" value="{{$pacienteInfo->pacienteExpediente}}">
+       <input type="hidden" name="areaEspecialidad" id="areaEspecialidad" value="{{$especialidad}}">
               
        <fieldset class="form-style-5">
            <div class="col-sm-4 consultaUserImageContainer">
@@ -135,7 +136,7 @@
            </div>
            
            <div class="col-sm-12 sumbmitButtonCotainer">
-                <input type="submit" value="Eviar"> 
+                <input type="submit" value="Terminar Consulta"> 
                 <p id="serverError" class="error"></p>
             </div>
        </fieldset>

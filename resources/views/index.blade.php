@@ -33,7 +33,7 @@
                 </p>
                 <button type="submit" name="submit">
     	            <i class="icon-arrow-right"></i>
-    	            <span>Sign in</span>
+    	            <span>Iniciar</span>
                 </button>     
             </form>
             </div>
@@ -47,25 +47,25 @@
         <br/>
         
         <section class="row informationSection">
-            <div class="col-md-12 informationSectionTitle ">
+            <div class="col-md-12 informationSectionTitle">
                 <h1>Sistema de gestión hospitalaria</h1>
             </div>
           
             <div class="col-md-4 informationSectionBoxes">
-                <h3><strong>Agilización de la transferencia de información</strong></h3>
-                <p>Sistema de gestión para el control efectivo de la información. Agiliza la transeferencia de información entre las diversas áreas que integran el hospital y alamacena dicha información de manera digital para mantener un registro.</p>
+                <h3 class="informationSectionBoxesTitles"><strong>Agilización de la transferencia de información</strong></h3>
+                <p class="informationSectionBoxesContent">Sistema de gestión para el control efectivo de la información. Agiliza la transeferencia de información entre las diversas áreas que integran el hospital y alamacena dicha información de manera digital para mantener un registro.</p>
             </div>
             
             
             <div class="col-md-4 informationSectionBoxes">
-                <h3><strong>Integración de la información hospitalaria</strong></h3>
-                <p>El sistema FastHosp integra toda la información del hospital de tal manera que facilita el mantenimiento y acceso a la misma por parte del personal administrativo y no administrativo registrado dentro del sistema del hospital.</p>
+                <h3 class="informationSectionBoxesTitles"><strong>Integración de la información hospitalaria</strong></h3>
+                <p class="informationSectionBoxesContent">El sistema FastHosp integra toda la información del hospital de tal manera que facilita el mantenimiento y acceso a la misma por parte del personal administrativo y no administrativo registrado dentro del sistema del hospital.</p>
             </div>
             
             
             <div class="col-md-4 informationSectionBoxes">
-                <h3><strong>Mejor comunicación entre departamentos</strong></h3>
-                <p>El sistema FastHosp facilita el intercambio de información entre las diversas áreas que integran el hospital, disminuyendo notablemente los tiempo de respuesta de cada una de las áreas involucradas.</p>
+                <h3 class="informationSectionBoxesTitles"><strong>Mejor comunicación entre departamentos</strong></h3>
+                <p class="informationSectionBoxesContent">El sistema FastHosp facilita el intercambio de información entre las diversas áreas que integran el hospital, disminuyendo notablemente los tiempo de respuesta de cada una de las áreas involucradas dentro del sistema.</p>
             </div>
         
         </section>

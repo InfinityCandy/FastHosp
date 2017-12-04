@@ -179,6 +179,25 @@ body {
 }
 /* -/Menu de usuario FIN */
 
+.mainLogoContainer {
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 0 auto;
+    height: 450px;
+    width: 100%
+}
+
+.mainLogo {
+     height: 100%;  
+     width: 100%;
+}
+
+.minMainLogo {
+    display: none;
+    height: 100%;  
+    width: 100%;
+}
+
 
 .error {
     text-align: center;
@@ -255,6 +274,14 @@ body {
     text-align: center;
     border-right: 3px solid white;
     border-left: 2px solid white;
+}
+
+.informationSectionBoxesTitles {
+    margin-bottom: 10%;
+}
+
+.informationSectionBoxesContent {
+    font-size: 1.2em;
 }
 
 .footerStyle {

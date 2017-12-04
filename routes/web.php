@@ -61,6 +61,7 @@ Route::post('medicoEspecialistaCambiarPassword', 'medicoEspecialistaMainControll
 Route::get('medicoEspecialistaLogout', 'medicoEspecialistaMainController@logout');
 Route::get('listarCitasPendientesEspecialidad', 'administrarCitasEspecialidadController@listarCitasPendientes');
 Route::get('consultaEspecialidad/{expedientePaciente}', 'administrarCitasEspecialidadController@consulta');
+Route::post('finalizarConsultaEspecialidad', 'administrarCitasEspecialidadController@finalizarConsulta');
 
 //Urgenciologos Routes
 Route::get('urgenciologo', 'urgenciologoMainController@index');

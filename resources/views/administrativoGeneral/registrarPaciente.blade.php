@@ -163,7 +163,7 @@
         </div>
         
         <div class="col-sm-12">
-            <input type="submit" value="Eviar"> 
+            <input type="submit" value="Registrar"> 
         </div>
         </fieldset> 
         

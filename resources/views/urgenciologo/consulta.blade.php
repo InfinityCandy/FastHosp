@@ -137,7 +137,7 @@
            </div>
            
            <div class="col-sm-12 sumbmitButtonCotainer">
-                <input type="submit" value="Eviar"> 
+                <input type="submit" value="Terminar Consulta"> 
                 <p id="serverError" class="error"></p>
             </div>
        </fieldset>
@@ -150,6 +150,10 @@
         var d = date.getDate();
         var m = date.getMonth()+1;
         var y = date.getFullYear();
+       
+        if(d < 10) {
+            d = "0"+d;
+        }
                 
         var fecha = y+"-"+m+"-"+d;
        

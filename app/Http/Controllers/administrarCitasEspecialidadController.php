@@ -38,6 +38,12 @@ class administrarCitasEspecialidadController extends Controller
         $userName = Session::get('nombreUsuario');
         $userImage = Session::get('fotoUsuario');
         $expedienteMedico = Session::get('expediente');
+        $expedienteMedicoSplit = explode("-", $expedienteMedico);
+        
+        $medicoEspecialidad = DB::table('especialidads')
+                                ->where('id', "=", $expedienteMedicoSplit[2])
+                                ->select('especialidad')
+                                ->get();
         
         
         if($userName != "") {
@@ -53,10 +59,44 @@ class administrarCitasEspecialidadController extends Controller
             }
 
 
-            return view('medicoEspecialista.consulta', ['nombreUsuario' => $userName, 'userImage' => $userImage, 'pacienteInfo' => $queryResult[0],'expedienteMedico' => $expedienteMedico,'historiaClinica' => $historiaClinicaExploded]); 
+            return view('medicoEspecialista.consulta', ['nombreUsuario' => $userName, 'userImage' => $userImage, 'pacienteInfo' => $queryResult[0],'expedienteMedico' => $expedienteMedico,'historiaClinica' => $historiaClinicaExploded, 'especialidad' => $medicoEspecialidad[0]->especialidad]); 
         }
         else {
             return redirect('/');
         }
     }//Fin de consulta
+    
+    public function finalizarConsulta (Request $request) {
+        $historiaClinicaDelPaciente = DB::table('historial_clinicos')
+                                      ->where('expedientePaciente', '=', $request->expedientePaciente) 
+                                      ->select('historiaClinica')
+                                      ->get();
+        
+        if($request->medicamentosIndicados != "") {
+            DB::table('medicamentos')->insert(
+                ['expedienteDelPaciente' => $request->expedientePaciente,
+                 'medicamentos' => $request->medicamentosIndicados,  
+                ]
+            );
+        }
+        
+        DB::table('historial_clinicos')
+            ->where('expedientePaciente', $request->expedientePaciente)
+            ->update(
+            ['peso' => $request->peso,
+             'altura' => $request->altura,
+             'presionArterial' => $request->presion,
+             'temperaturaCorporal' => $request->temperaturaCorporal,
+             'historiaClinica' => $historiaClinicaDelPaciente[0]->historiaClinica."Fecha de consulta: ".$request->fechaDeConsulta."<br > Se canalizó al paciente al área de: ".$request->areaEspecialidad."<br >".$request->razonDeConsulta."<br >".$request->diagnosticoMedico."<br > Se le indicó al paciente: ".$request->indicaciones."<br > Se le recetó al paciente: ".$request->medicamentosIndicados."<br > < br> <br >",
+             'alergiaAMedicamentos' => $request->alergiaAMedicamentos,
+             'adicciones' => $request->adicciones,
+             'condiciones' => $request->condiciones,    
+            ]
+        );
+        
+        DB::table('citas_especialidads')
+            ->where('expedientePaciente', '=', $request->expedientePaciente)->delete();
+        
+        return redirect('listarCitasPendientesEspecialidad');
+    }//Fin de finalizarConsulta
 }
