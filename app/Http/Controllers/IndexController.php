@@ -38,6 +38,12 @@ class IndexController extends Controller
             if($userType == "MF") {
                 return redirect('medicoFamiliar'); 
             }
+            
+            //Validamos si el usuario es médico especialista
+            if($userType == "E") {
+                return redirect('medicoEspecialista');
+            }
+
                 
             //Validamos si el usuario es administrativo de urgencias.
             if($userType == "U") {
