@@ -5,20 +5,20 @@
 
 @section('opcionesMenu')
    
-    @include('layouts.medicoFamiliarMenu')
+    @include('layouts.medicoEspecialistaMenu')
     
 @endsection
 
 @section('userMenu')
 
-    @include('layouts.medicoFamiliarUserMenu')
+    @include('layouts.medicoEspecialistaUserMenu')
 
 @endSection
 
 
 @section('principal')
    @section('boxTitle', 'Cambiar Contraseña')
-    <form method="post" action="../medicoFamiliarCambiarPassword" onsubmit="return validar()">
+      <form method="post" action="../medicoEspecialistaCambiarPassword" onsubmit="return validar()">
         <input type="hidden" name="_token" value="{!! csrf_token() !!}">       
         <fieldset class="form-style-5">
             
@@ -84,5 +84,6 @@
                 }
             }
         </script>
+   
    
 @endsection

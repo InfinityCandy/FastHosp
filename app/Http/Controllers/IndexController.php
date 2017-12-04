@@ -105,6 +105,20 @@ class IndexController extends Controller
                 Session::put('expediente', $queryResult[0]->medicoExpediente);
                 Session::put('fotoUsuario', "storage/".$queryResult[0]->foto);
             }
+            
+            //Sí el usuario es de tipo E (médico especialista) hacemos la query a la tabla de médicos
+            if($userType == "E") {
+                $queryResult = DB::table('medicos')
+                                ->join('expedientes', 'medicos.medicoExpediente', '=', 'expedientes.expediente')
+                                ->where('expedientes.expediente', "=", $expediente)
+                                ->select('medicos.medicoExpediente', 'medicos.nombre', 'medicos.apellido', 'medicos.password', 'medicos.foto')
+                                ->get(); 
+
+                //Almacenamos el nombre, apellido, expediente y foto en variables de sisión para su posterior uso en las vistas
+                Session::put('nombreUsuario', $queryResult[0]->nombre." ".$queryResult[0]->apellido);
+                Session::put('expediente', $queryResult[0]->medicoExpediente);
+                Session::put('fotoUsuario', "storage/".$queryResult[0]->foto);
+            }
 
             //Sí el usuario es de tipo "UM" (urgenciologo) hacemos la query a la tabla de médicos
             if($userType == "UM") {
@@ -151,6 +165,11 @@ class IndexController extends Controller
                     if($userType == "MF") {
                         return redirect('medicoFamiliar'); 
                     }
+                    
+                    //Validamos si el usuario es médico especialista
+                    if($userType == "E") {
+                        return redirect('medicoEspecialista');
+                    }
 
                     //Validamos si el usuario es administrativo de urgencias.
                     if($userType == "U") {
@@ -172,18 +191,14 @@ class IndexController extends Controller
                     Session::forget('nombreUsuario');
                     Session::forget('expediente');
                     Session::forget('fotoUsuario');
-                   // return view('index', ['errorMessage' => 'Error: Expediente o contraseña incorrectos.']);
                     return redirect('/')->with('errorMessage', 'Error: Expediente o contraseña incorrectos.');
-                    //return redirect()->route('test', ['errorMessage' => 'Error: Expediente o contraseña incorrectos.']);
                 }
             }
             else {
                 Session::forget('nombreUsuario');
                 Session::forget('expediente');
                 Session::forget('fotoUsuario');
-                //return view('index', ['errorMessage' => 'Error: Expediente o contraseña incorrectos.']);
                 return redirect('/')->with('errorMessage', 'Error: Expediente o contraseña incorrectos.');
-                //return redirect()->route('test', ['errorMessage' => 'Error: Expediente o contraseña incorrectos.']);
             }
         }
     }

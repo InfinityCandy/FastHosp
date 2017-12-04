@@ -379,3 +379,9 @@ body {
     border-radius: 25%;
 }
 
+/********************* Canalizar paciente *********************/
+.especialidadCanalizarContainer {
+    display: none;
+    transition: all 1000ms;
+}
+

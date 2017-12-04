@@ -82,6 +82,14 @@ class administrarCitasMedicinaFamiliarController extends Controller
             ]
         );
         
+        if($request->canalizarPaciente == "Si") {
+            DB::table('citas_especialidads')->insert(
+                ['expedientePaciente' => $request->expedientePaciente,
+                 'especialidadCanalizada' => $request->especialidadCanalizar,  
+                ]
+            );
+        }
+        
         DB::table('citas')
             ->where('expedienteDelPaciente', '=', $request->expedientePaciente)->delete();
         

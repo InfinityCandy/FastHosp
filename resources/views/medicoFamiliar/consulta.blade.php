@@ -134,6 +134,29 @@
                <textarea class="form-control" type="text" name="medicamentosIndicados" id="medicamentosIndicados" rows="4" placeholder="Medicamento, dosis, duración (Dejar en blanco si no se ha recetado medicamento)"></textarea>
            </div>
            
+            <div class="col-md-3 form-group">
+                <label for="canalizarPaciente">Canalizar Paciente</label>
+                <select class="form-control" name="canalizarPaciente" id="canalizarPaciente">
+                    <option value="No">No</option>
+                    <option value="Si">Sí</option>
+                </select>
+            </div>
+            
+            <div class="col-md-5 form-group especialidadCanalizarContainer">
+                <label for="especialidadCanalizar">Especialidad</label>
+                <select class="form-control" name="especialidadCanalizar" id="especialidadCanalizar">
+                    <option value="1">Cardiología</option>                   
+                    <option value="3">Dermatología</option>
+                    <option value="4">Traumatología</option>                                    
+                    <option value="5">Epidemiología</option>                    
+                    <option value="6">Gastroenterología</option>
+                    <option value="7">Hematología</option>
+                    <option value="8">Oncología</option>
+                    <option value="9">Neurlogía</option>
+                    <option value="10">Urología</option>
+                </select>
+            </div>
+           
            <div class="col-sm-12 sumbmitButtonCotainer">
                 <input type="submit" value="Eviar"> 
                 <p id="serverError" class="error"></p>
@@ -157,6 +180,17 @@
        
         var fechaDeConsulta = document.querySelector("#fechaDeConsulta");
         fechaDeConsulta.value = fecha;
+       
+        var canalizarPaciente = document.querySelector("#canalizarPaciente");
+        
+        canalizarPaciente.addEventListener("change", function() {
+            if(canalizarPaciente.value == "Si") {
+                 document.querySelector(".especialidadCanalizarContainer").style.display = "block";
+            }
+            else {
+                document.querySelector(".especialidadCanalizarContainer").style.display = "none";
+            }
+        });
    </script>
    
 @endsection
