@@ -33,6 +33,14 @@
                 <label for="nombre">Nombre del paciente</label>
                 <input class="form-control" type="text" name="nombrePaciente" id="nombrePaciente" placeholder="Miguel Ángel Pimentel Arriaga" required>
             </div>
+            
+            <div class="col-md-6 col-md-offset-3 form-group">
+                <label for="turnoDeCita">Turno de consulta</label>
+                <select class="form-control" name="turnoDeCita" id="turnoDeCita">
+                    <option value="Matutino">Matutino</option>
+                    <option value="Vespertino">Vespertino</option>
+                </select>
+            </div>
         
             <div class="col-md-6 col-md-offset-3 form-group">
                 <label for="nombre">Expediente del médico</label>
@@ -64,7 +72,7 @@
             </div>
             
             <div class="col-sm-12 sumbmitButtonCotainerCitas">
-                <input type="submit" value="Eviar"> 
+                <input type="submit" value="Agendar"> 
                 <p id="serverError" class="error"></p>
             </div>
        </fieldset>
@@ -142,11 +150,14 @@
         }//Fin de obtenerNombreUsuario
         
         var expedienteMedico = document.querySelector("#expedienteMedico");
+        var turnoDeCita = document.querySelector("#turnoDeCita");
+        
         expedienteMedico.addEventListener("focus", obtenerMedicoAsignado);
+        turnoDeCita.addEventListener("change", obtenerMedicoAsignado);
         
         function obtenerMedicoAsignado () {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "../obtenerMedicoAsignado", true);
+            xhr.open("GET", "../obtenerMedicoAsignado/"+turnoDeCita.value, true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             
             xhr.onload = function() {

@@ -34,7 +34,7 @@ Route::get('administrativoFamiliarLogout', 'administrativoFamiliarMainController
 Route::resource('agregarCita', 'agregarCitasController');
 //Helpers para Administrativo familiar
 Route::get('obtenerNombreDePaciente/{expediente}', 'ajaxHelper@obtenerNombreDePaciente');
-Route::get('obtenerMedicoAsignado', 'ajaxHelper@obtenerExpedienteMedicoAsignado');
+Route::get('obtenerMedicoAsignado/{turno}', 'ajaxHelper@obtenerExpedienteMedicoAsignado');
 
 //Administrativo Urgencias Routes
 Route::get('administrativoUrgencias', 'administrativoUrgenciasMainController@index');

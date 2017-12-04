@@ -71,7 +71,7 @@ class agregarCitasController extends Controller
                                 ->get();
         
             $tempNombreMedico = 'Nombre del médico: '.$datosDelMedico[0]->nombre.' '.$datosDelMedico[0]->apellido;
-            $tempExpedienteMedico = 'Expediente del médico'.$request->expedienteMedico;
+            $tempExpedienteMedico = 'Expediente del médico: '.$request->expedienteMedico;
             $tempFechaCita = 'Fecha de la cita: '.$request->fechaDeCita;
             $tempHoraCita = 'Hora de la cita: '.$request->horaCita;
             $tempConsultorio = 'Consultorio: '.$request->consultorio;

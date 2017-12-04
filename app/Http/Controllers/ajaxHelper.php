@@ -30,11 +30,15 @@ class ajaxHelper extends Controller
           
     }//Fin de obtenerNombreDePaciente
     
-    public function obtenerExpedienteMedicoAsignado() {
+    public function obtenerExpedienteMedicoAsignado($turno) {
         //Obtenemos los expedientes y turnos de todos los médicos registrados en el sistema
         $medicosFamiliares = DB::table('medicos')
                                 ->select('medicoExpediente', 'turno')
-                                ->where('especialidad', "=", 2)
+                                ->where([
+                                    ['especialidad', "=", 2],
+                                    ['turno', "=", $turno]
+                                ])
+                                //->where('especialidad', "=", 2)
                                 ->get();
         
         //Obtenemos la cantidad de citas que tiene asifnado cada médico
