@@ -19,7 +19,7 @@
 @section('principal')
    @section('boxTitle', 'Citas Pedientes')
    @foreach ($pacienteInfo as $paciente)
-   <a href="{{'../consulta/'.$paciente->pacienteExpediente}}">
+   <a href="{{'../consultaEspecialidad/'.$paciente->pacienteExpediente}}">
       <div class="col-md-5 col-sm-10 col-xs-10 userDateInfoWraper">
        <div class="userDateInfoContainer">
            <div class="col-md-12">
@@ -29,7 +29,7 @@
            <div class="col-md-12">
                <h4>Expediente: {{$paciente->pacienteExpediente}}</h4>
                <h4>Nombre: {{$paciente->nombre.' '.$paciente->apellido}}</h4>
-               <h4>Canalizado a: </h4>
+               <h4>Canalizado a: {{$especialidad}}</h4>
            </div>
        </div>
     </div>
