@@ -118,7 +118,7 @@ class administrarMedicosController extends Controller
                 ]
             );
             if($queryStatus2) {
-                return redirect('administrarMedicos')->with('succesStatus', 'Médico registrado con exito!');
+                return redirect('administrarMedicos')->with('succesStatus', 'Médico registrado con exito! Expediente del médico: '.$expediente);
             }
             else {
                 return redirect('administrarMedicos')->with('errorStatus', 'Error: No ha sido posible realizar el registro!');

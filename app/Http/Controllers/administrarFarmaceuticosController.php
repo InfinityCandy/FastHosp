@@ -109,7 +109,7 @@ class administrarFarmaceuticosController extends Controller
                 ]
             );
             if($queryStatus2) {
-                return redirect('administrarFarmaceuticos')->with('succesStatus', 'Farmaceutico registrado con exito!');
+                return redirect('administrarFarmaceuticos')->with('succesStatus', 'Farmaceutico registrado con exito! Expediente de farmaceutico: '.$expediente);
             }
             else {
                 return redirect('administrarFarmaceuticos')->with('errorStatus', 'Error: No ha sido posible realizar el registro!');

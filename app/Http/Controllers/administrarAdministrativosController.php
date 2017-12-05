@@ -109,7 +109,7 @@ class administrarAdministrativosController extends Controller
                 ]
             );
             if($queryStatus2) {
-                return redirect('administrarAdministrativos')->with('succesStatus', 'Administrativo registrado con exito!');
+                return redirect('administrarAdministrativos')->with('succesStatus', 'Administrativo registrado con exito! Expediente: '.$expediente);
             }
             else {
                 return redirect('administrarAdministrativos')->with('errorStatus', 'Error: No ha sido posible realizar el registro!');

@@ -113,7 +113,7 @@ class administrarUrgenciologosController extends Controller
                 ]
             );
             if($queryStatus2) {
-                return redirect('administrarMedicos')->with('succesStatus', 'Médico urgenciologo registrado con exito!');
+                return redirect('administrarMedicos')->with('succesStatus', 'Médico urgenciologo registrado con exito! Expediente urgenciologo: '.$expediente);
             }
             else {
                 return redirect('administrarMedicos')->with('errorStatus', 'Error: No ha sido posible realizar el registro!');
