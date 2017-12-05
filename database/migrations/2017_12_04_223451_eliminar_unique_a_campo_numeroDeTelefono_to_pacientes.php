@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ModEliminarUniqueACamposTelefonoPersonaDeConfianza1Y2ToPaciente extends Migration
+class EliminarUniqueACampoNumeroDeTelefonoToPacientes extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,13 @@ class ModEliminarUniqueACamposTelefonoPersonaDeConfianza1Y2ToPaciente extends Mi
     public function up()
     {
         Schema::table('pacientes', function($table) {
-            $table->dropColumn('telefonoPersonaDeConfianza1');
-            $table->dropColumn('telefonoPersonaDeConfianza2');
+            $table->dropColumn('numeroDeTelefono');
         });
         
         Schema::table('pacientes', function($table) {
-            $table->bigInteger('telefonoPersonaDeConfianza1');
-            $table->bigInteger('telefonoPersonaDeConfianza2');
+            $table->bigInteger('numeroDeTelefono');
         });
+        
     }
 
     /**
@@ -29,12 +28,11 @@ class ModEliminarUniqueACamposTelefonoPersonaDeConfianza1Y2ToPaciente extends Mi
      *
      * @return void
      */
-
     public function down()
     {
         Schema::table('pacientes', function($table) {
-            $table->bigInteger('telefonoPersonaDeConfianza1')->unique()->change(); 
-            $table->bigInteger('telefonoPersonaDeConfianza2')->unique()->change();
+            $table->bigInteger('numeroDeTelefono')->unique()->change();
         });
+        
     }
 }

@@ -35,7 +35,7 @@
             </div>
             
             <div class="col-md-6 col-md-offset-3 form-group">
-                <label for="turnoDeCita">Turno de consulta</label>
+                <label for="turnoDeCita">Horario de consulta</label>
                 <select class="form-control" name="turnoDeCita" id="turnoDeCita">
                     <option value="Matutino">Matutino</option>
                     <option value="Vespertino">Vespertino</option>
